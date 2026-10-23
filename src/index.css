@@ -1,13 +1,2 @@
 @import "tailwindcss";
 @plugin "daisyui";
-
-
-/* #root{
-    background-color: white;
-    height: 100vh;
-} */
-
-img{
-    width: 100%;
-    height: 100%;
-}

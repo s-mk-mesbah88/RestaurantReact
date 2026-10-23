@@ -3,19 +3,22 @@ import TesteNest from "./icon/TesteNest.png";
 import Sabad from "./icon/Symbol.png";
 import "./App.css";
 
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Shop from "./Components/Shop/Shop";
-import Loging from "./Components/Loging/Loging";
-import Contact from "./Components/Contact/Contact";
-import Shopping from "./Components/Shopping/Shopping";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Shop from "./Pages/Shop/Shop";
+import Loging from "./Pages/Loging/Loging";
+import Contact from "./Pages/Contact/Contact";
+import Shopping from "./Pages/Shopping/Shopping";
+import BestFood from "./Pages/Home/BestFood/BestFood";
+import KingsBurger from "./Pages/Home/KingsBurger/KingsBurger";
+import Spicy from "./Pages/Home/spicy/spicy";
 
 function App() {
   return (
     <BrowserRouter>
       <nav className="flex items-center justify-evenly bg-white px-8 py-4 shadow-lg h-20">
         <div className="w-52 h-full">
-          <img src={TesteNest} className="object-cover" />
+          <img src={TesteNest} className="object-cover w-full h-full" />
         </div>
 
         <div className="w-fit h-fit flex items-center gap-4">
@@ -36,6 +39,15 @@ function App() {
             >
               <li>
                 <Link to="/Home">Home 1</Link>
+              </li>
+              <li>
+                <Link to="/BestFood">Best Food</Link>
+              </li>
+              <li>
+                <Link to="/KingsBurger">Kings Burger</Link>
+              </li>
+              <li>
+                <Link to="/Spicy">Spicy</Link>
               </li>
             </ul>
           </div>
@@ -91,6 +103,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Loging />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/BestFood" element={<BestFood />} />
+        <Route path="/KingsBurger" element={<KingsBurger />} />
+        <Route path="/Spicy" element={<Spicy />} />
         <Route path="/About" element={<About />} />
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Contact" element={<Contact />} />
